@@ -41,7 +41,7 @@ module.exports = {
 
       await message.reply("🕣 | جارٍ البحث...");
 
-      const response = await axios.get(`https://markdevsapi-2014427ac33a.herokuapp.com/gpt4?ask=${encodeURIComponent(prompt)}`);
+      const response = await axios.get(`https://api.onlytris.space/gemini?question=${encodeURIComponent(prompt)}`);
 
       if (response.status !== 200 || !response.data || !response.data.answer) {
         throw new Error('Invalid or missing response from API');
